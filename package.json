@@ -1,5 +1,5 @@
 {
-  "name": "naive-table-scroll",
+  "name": "vue3-infinite-scroll",
   "private": true,
   "version": "0.0.0",
   "scripts": {
