@@ -53,7 +53,7 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          ssh-key: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
