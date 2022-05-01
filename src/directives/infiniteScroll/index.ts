@@ -6,6 +6,7 @@ const infiniteScroll: Directive<any, any> = {
     // 如果el已经有了滚动事件，则直接返回
     if (el.hasInfiniteScrollLoadEvent) return
 
+    // 获取事件处理函数 目标元素 延迟时间 触发距离
     const { func, target, delay = 500, threshold = 100 } = binding.value
     const targetElement = el.querySelector(target)
     el.tableInfiniteScrollFn = function (e: Event) {
@@ -22,7 +23,7 @@ const infiniteScroll: Directive<any, any> = {
     }
     ;(targetElement || el).addEventListener(
       'scroll',
-      debounce(el.tableInfiniteScrollFn, delay)
+      throttle(el.tableInfiniteScrollFn, delay)
     )
     el.hasInfiniteScrollLoadEvent = true
   }
