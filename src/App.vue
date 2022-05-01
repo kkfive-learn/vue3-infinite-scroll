@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="directive-container">
+    <!-- <div class="directive-container">
       <DirectiveScroll />
-    </div>
+    </div> -->
     <div class="observer-container">
       <div class="item" v-for="i in data">{{ i }}</div>
       <ObserverScroll :handle-intersect="load" />
